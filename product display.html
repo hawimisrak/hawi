@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      background-color: #f7f7f7;
+      padding: 25px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .product {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(30% - 30px);
+  max-width: calc(30% - 30px);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.product img:hover {
+  transform: scale(1.05); /* Zoom effect on hover for images */
+}
+
+.product h2 {
+  font-size: 20px;
+  color: #222; 
+  margin: 15px 0; 
+  font-weight: 600; 
+}
+
+.product p {
+  font-size: 16px; 
+  color: #666; 
+  margin-bottom: 20px; 
+  line-height: 1.5; 
+}
+
+.product .price {
+  font-size: 18px; 
+  color: #007bff; 
+  font-weight: bold;
+  margin-bottom: 15px; 
+}
+
+      .product button {
+  background: #007bff; /* Primary blue color for the button */
+  color: #fff;
+  border: none;
+  padding: 12px 20px; /* Slightly more padding for better balance */
+  border-radius: 8px; /* Increased border-radius for smoother edges */
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px; /* Increased font size for better visibility */
+  font-weight: 600; /* Bold text for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+}
+
+.product button:hover {
+  background: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover for interactivity */
+}
+
+.product button:active {
+  background: #004085; /* Even darker blue on click for a pressed effect */
+  transform: scale(1); /* Remove the scale effect when clicked */
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .product button {
+    font-size: 15px; /* Adjusted font size for smaller screens */
+    padding: 10px 18px; /* Adjusted padding for smaller buttons */
+  }
+}    
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Our Featured Products</h1>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Product 1">
+      <h2>Product 1</h2>
+      <p>This product .</p>
+      <div class="price">$20.00</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Product 2">
+      <h2>Product 2</h2>
+      <p>This is a short description of Product 2 that gives customers an idea of what the product is.</p>
+      <div class="price">$25.00</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Product 3">
+      <h2>Product 3</h2>
+      <p>This is a short description of Product 3 that gives customers an idea of what the product is.</p>
+      <div class="price">$30.00</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Product 4">
+      <h2>Product 4</h2>
+      <p>This is a short description of Product 4 that gives customers an idea of what the product is.</p>
+      <div class="price">$35.00</div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
